@@ -28,9 +28,9 @@ def uploadData(request):
     if request.method == 'GET':
         global dataValue1, dataValue2, dataValue3
 
-        f1 = open(r"D:\课件\大三上\实验杜\Data\upload_file\static\分批测试数据\1\1_tnn.csv",encoding='utf-8')
-        f2 = open(r"D:\课件\大三上\实验杜\Data\upload_file\static\分批测试数据\2\2_tnn.csv",encoding='utf-8')
-        f3 = open(r"D:\课件\大三上\实验杜\Data\upload_file\static\分批测试数据\3\3_tnn.csv",encoding='utf-8')
+        f1 = open(r"D:/github/DuLab/BackEnd/upload_file/static/分批测试数据/1/1_tnn.csv",encoding='utf-8')
+        f2 = open(r"D:/github/DuLab/BackEnd/upload_file/static/分批测试数据/2/2_tnn.csv",encoding='utf-8')
+        f3 = open(r"D:/github/DuLab/BackEnd/upload_file/static/分批测试数据/3/3_tnn.csv",encoding='utf-8')
 
         # f1 = open('/Users/mawenbo/PycharmProjects/uploadApi/upload_file/static/分批测试数据/1/1_tnn.csv')
         # f2 = open('/Users/mawenbo/PycharmProjects/uploadApi/upload_file/static/分批测试数据/2/2_tnn.csv')
@@ -209,7 +209,7 @@ def resultAnalysis(request):
 def predictModel(request):
     if request.method == 'POST':
         dataValue = []
-        test_file = 'D:/github/DuLab\BackEnd/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/tnn.csv'
+        test_file = 'D:/github/DuLab/BackEnd/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/tnn.csv'
         # test_file = '/Users/mawenbo/PycharmProjects/uploadApi/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/tnn.csv'
         f = open(test_file, encoding='utf-8')
         data = pd.read_csv(f, sep=',', header=0)
@@ -306,7 +306,7 @@ def LSTMPreData(request):
         #     '/Users/mawenbo/PycharmProjects/uploadApi/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/rnn_rise.csv',
         #     'r')
         f = open(
-            r'D:/github/DuLab\BackEnd/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/rnn_rise.csv',
+            r'D:/github/DuLab/BackEnd/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/rnn_rise.csv',
             'r',encoding='utf-8')
 
         reader = csv.reader(f)
@@ -354,7 +354,7 @@ def zipFile(request):
         rf.read_from_zips(zipAddress, is_save=True, is_draw=True)
 
         f = open(
-            r'D:/github/DuLab\BackEnd/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/tnn.csv',
+            r'D:/github/DuLab/BackEnd/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/tnn.csv',
             'r',encoding='utf-8')
         # f = open(
         #     '/Users/mawenbo/PycharmProjects/uploadApi/upload_file/DataPreprocessAPI/DataPreprocessAPI/src/Data/tnn.csv',
